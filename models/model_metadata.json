@@ -1,0 +1,54 @@
+{
+  "model_name": "RandomForestClassifier",
+  "model_version": "1.0.0",
+  "feature_schema_version": "1.0.0",
+  "trained_at": "2026-10-23T01:46:18.243445",
+  "random_seed": 42,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 8,
+    "min_samples_split": 2,
+    "class_weight": "balanced"
+  },
+  "feature_columns": [
+    "event_count",
+    "unique_files",
+    "decoy_events",
+    "decoy_ratio",
+    "create_count",
+    "modify_count",
+    "delete_count",
+    "rename_count",
+    "events_per_second",
+    "inter_event_mean",
+    "inter_event_std"
+  ],
+  "feature_importances": {
+    "event_count": 0.0909,
+    "unique_files": 0.0085,
+    "decoy_events": 0.241,
+    "decoy_ratio": 0.2324,
+    "create_count": 0.0,
+    "modify_count": 0.0289,
+    "delete_count": 0.0,
+    "rename_count": 0.0279,
+    "events_per_second": 0.1495,
+    "inter_event_mean": 0.2113,
+    "inter_event_std": 0.0095
+  },
+  "dataset_summary": {
+    "total_windows": 3007,
+    "train_val_samples": 2533,
+    "test_samples": 474,
+    "class_distribution": {
+      "1": 1575,
+      "0": 1432
+    }
+  },
+  "dependencies": {
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6"
+  }
+}

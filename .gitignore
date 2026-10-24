@@ -1,0 +1,39 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# C Build Artifacts
+*.o
+*.obj
+*.exe
+monitor/build/
+monitor/*.exe
+
+# Runtime data & logs
+runtime/monitored/*
+!runtime/monitored/.gitkeep
+logs/*.jsonl
+logs/*.log
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/test_results/*
+!data/test_results/.gitkeep
+
+# SQLite database
+*.sqlite3
+*.db
+application/*.db
+
+# OS Artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store

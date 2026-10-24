@@ -1,0 +1,46 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-10-20T01:30:00Z",
+  "decoys": [
+    {
+      "file_id": "DECOY-001",
+      "relative_path": "decoys/Confidential_Report.docx.txt",
+      "category": "sensitive_document",
+      "description": "Fictional internal financial quarterly report with watermarked canary text",
+      "size_bytes": 512,
+      "canary_token": "CANARY-FIN-88219"
+    },
+    {
+      "file_id": "DECOY-002",
+      "relative_path": "decoys/Backup_Credentials.kdbx.txt",
+      "category": "credential_store",
+      "description": "Harmless simulated password store header with fake dummy credentials",
+      "size_bytes": 1024,
+      "canary_token": "CANARY-CRED-99381"
+    },
+    {
+      "file_id": "DECOY-003",
+      "relative_path": "decoys/Financial_Records_2025.xlsx.txt",
+      "category": "accounting",
+      "description": "Simulated annual tax balance sheet containing randomized demo numbers",
+      "size_bytes": 768,
+      "canary_token": "CANARY-TAX-10293"
+    },
+    {
+      "file_id": "DECOY-004",
+      "relative_path": "decoys/database_dump.sql",
+      "category": "database",
+      "description": "Mock database schema with synthetic users and hashed dummy passwords",
+      "size_bytes": 2048,
+      "canary_token": "CANARY-SQL-55412"
+    },
+    {
+      "file_id": "DECOY-005",
+      "relative_path": "decoys/private_key.pem.txt",
+      "category": "cryptographic_key",
+      "description": "Harmless dummy RSA certificate header for honeypot alerting",
+      "size_bytes": 850,
+      "canary_token": "CANARY-KEY-77120"
+    }
+  ]
+}

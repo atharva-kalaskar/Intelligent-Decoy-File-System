@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Behavioral window feature schema for Random Forest activity classification",
+  "features": [
+    {
+      "name": "event_count",
+      "type": "integer",
+      "description": "Total number of file system events in the observation window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "unique_files",
+      "type": "integer",
+      "description": "Number of distinct file paths observed in the window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "decoy_events",
+      "type": "integer",
+      "description": "Total number of events directly involving recognized decoy files",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "decoy_ratio",
+      "type": "float",
+      "description": "Proportion of decoy events relative to total events (0.0 for empty windows)",
+      "min_val": 0.0,
+      "max_val": 1.0,
+      "default_val": 0.0
+    },
+    {
+      "name": "create_count",
+      "type": "integer",
+      "description": "Count of CREATE events in the window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "modify_count",
+      "type": "integer",
+      "description": "Count of MODIFY events in the window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "delete_count",
+      "type": "integer",
+      "description": "Count of DELETE events in the window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "rename_count",
+      "type": "integer",
+      "description": "Count of RENAME events (both old and new designations) in the window",
+      "min_val": 0,
+      "default_val": 0
+    },
+    {
+      "name": "events_per_second",
+      "type": "float",
+      "description": "Event arrival rate: event_count divided by window duration in seconds",
+      "min_val": 0.0,
+      "default_val": 0.0
+    },
+    {
+      "name": "inter_event_mean",
+      "type": "float",
+      "description": "Mean time interval in seconds between consecutive events (0.0 if fewer than 2 events)",
+      "min_val": 0.0,
+      "default_val": 0.0
+    },
+    {
+      "name": "inter_event_std",
+      "type": "float",
+      "description": "Standard deviation of inter-event time intervals in seconds (0.0 if fewer than 2 events)",
+      "min_val": 0.0,
+      "default_val": 0.0
+    }
+  ],
+  "target": {
+    "name": "is_suspicious",
+    "type": "integer",
+    "description": "Binary label: 0 = Normal activity, 1 = Suspicious activity",
+    "allowed_values": [0, 1]
+  }
+}

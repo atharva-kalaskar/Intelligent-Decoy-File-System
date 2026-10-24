@@ -1,0 +1,35 @@
+{
+  "project_name": "Intelligent Decoy File System",
+  "version": "1.0.0",
+  "paths": {
+    "monitored_directory": "runtime/monitored",
+    "decoy_source_directory": "decoys/sample_files",
+    "manifest_file": "decoys/manifest.json",
+    "log_file": "logs/events.jsonl",
+    "db_file": "application/decoy_system.db",
+    "model_file": "models/random_forest_model.joblib",
+    "model_metadata_file": "models/model_metadata.json",
+    "feature_schema_file": "ml/feature_schema.json",
+    "raw_dataset_file": "data/raw/synthetic_scenarios.jsonl",
+    "processed_dataset_file": "data/processed/feature_windows.csv",
+    "evaluation_metrics_file": "data/test_results/evaluation_metrics.json",
+    "confusion_matrix_image": "data/test_results/confusion_matrix.png"
+  },
+  "windowing": {
+    "window_size_seconds": 30.0,
+    "slide_interval_seconds": 10.0,
+    "min_events_per_window": 1
+  },
+  "detection": {
+    "model_probability_threshold": 0.50,
+    "rule_baseline": {
+      "min_decoy_events": 2,
+      "min_decoy_ratio": 0.20
+    }
+  },
+  "c_monitor": {
+    "buffer_size_bytes": 65536,
+    "watch_subtree": true,
+    "flush_interval_events": 1
+  }
+}
